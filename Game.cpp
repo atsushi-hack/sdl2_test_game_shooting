@@ -57,9 +57,15 @@ void Game::Init(const char* title, int xpos, int ypos, int width, int height, bo
 
         // Create player, enemies, stars...
         m_player = new Player((width / 2) - 25, height - 60, 50, 50, width, height);
-        for (int i = 0; i < 5; ++i) { // 5 columns
+
+        // Create enemies centered
+        const int num_cols = 5;
+        const int col_width = 100;
+        const int block_width = num_cols * col_width;
+        const int start_x = (m_screenWidth - block_width) / 2;
+        for (int i = 0; i < num_cols; ++i) { // 5 columns
             for (int j = 0; j < 3; ++j) { // 3 rows
-                m_enemies.emplace_back(50 + i * 100, 50 + j * 60, 40, 40);
+                m_enemies.emplace_back(start_x + i * col_width, 50 + j * 60, 40, 40);
             }
         }
         for (int i = 0; i < NUM_STARS; ++i) {
