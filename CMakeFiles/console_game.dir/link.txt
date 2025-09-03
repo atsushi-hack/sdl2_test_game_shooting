@@ -1,0 +1,1 @@
+/usr/bin/c++ -Xlinker --dependency-file=CMakeFiles/console_game.dir/link.d CMakeFiles/console_game.dir/Enemy.cpp.o CMakeFiles/console_game.dir/Game.cpp.o CMakeFiles/console_game.dir/Player.cpp.o CMakeFiles/console_game.dir/main.cpp.o -o console_game  -Wl,-rpath,/usr/local/lib /usr/local/lib/libSDL2_ttf-2.0.so.0.2400.0 /usr/local/lib/libSDL2-2.0.so.0.3200.8
